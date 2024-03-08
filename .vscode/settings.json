@@ -1,0 +1,11 @@
+{
+    "material-icon-theme.folders.associations": {
+        "adapters": "pipe",
+        "core": "rules",
+        "external": "tools",
+        ".shared": "shared"
+    },
+    "material-icon-theme.files.associations": {
+        "*.Service.ts": "typescript"
+    }
+}
