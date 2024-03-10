@@ -3,6 +3,7 @@ import { Router } from "express";
 import { GetUsersController, CreateUserController, DeleteUsersController } from "./adapters/controllers/UserController"
 import { CreateAccessController, GetAccessController } from "./adapters/controllers/AccessController";
 import { CreateStoreController, ReadAllController } from "./adapters/controllers/StoreController";
+import { CreateProductController } from "./adapters/controllers/ProductController";
 
 const router = Router()
 
@@ -15,5 +16,7 @@ router.get('/accesses', GetAccessController)
 
 router.post('/store/:userId', CreateStoreController)
 router.get('/stores', ReadAllController)
+
+router.post('/product/:storeId', CreateProductController)
 
 export { router }

@@ -28,7 +28,18 @@ class _StoreRepositoryMySQL implements StoreRepository {
     }
 
     getAllStores(): Promise<Store[]> {
-        return this.prisma.store.findMany()
+        return this.prisma.store.findMany({
+            select: {
+                id: true,
+                name: true,
+                User: {
+                    select: {
+                        id: true,
+                        name: true
+                    }
+                }
+            }
+        })
     }
 }
 
